@@ -43,7 +43,9 @@ jobs:
           key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
-
+      - name: typia set
+        run: pnpm run prestart
+        
       - name: Install dependencies
         run: pnpm install
 
